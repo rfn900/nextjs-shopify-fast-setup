@@ -1,9 +1,14 @@
 import Head from "next/head";
+import { getProductsInCollection } from "../lib/shopify";
+import ProductList from "../components/ProductList";
+export default function Home({ products }) {
+  return <ProductList products={products} />;
+}
 
-export default function Home() {
-  return (
-    <div className="text-6xl w-screen h-screen flex items-center justify-center bg-gray-50">
-      Next App Created
-    </div>
-  );
+export async function getStaticProps() {
+  const products = await getProductsInCollection();
+
+  return {
+    props: { products },
+  };
 }
