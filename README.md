@@ -28,6 +28,6 @@ Make sure you clear the following steps
   SHOPIFY_STORE_DOMAIN=<Your Store Domain>
   ```
 
-- [ ] Change category name on `lib/shopify.js:29` to the category you created
+- [ ] Change category name on `lib/shopify.js:30` to the category you created
       before
 - [ ] run `npm run dev`
