@@ -1,29 +1,33 @@
-# Next.js + Tailwind CSS Example
+# Next.js + Tailwind CSS + Shopify Headless
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This creates an e-commerce application with [NextJS](https://nextjs.org/) + [Tailwind CSS](https://tailwindcss.com/) using
+[Shopify](https://shopify.dev/) as a `headless CMS`.
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+## Setting up NextJS with Headless Shopify
 
-## Preview
+Make sure you clear the following steps
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+### On [Shopify](https://shopify.dev/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+- [ ] Create a developer account with Shopify
+- [ ] Create a private app to create an API access into your dev store
+- [ ] Create a collection and load up some test products
+- [ ] Create a private app for the _Storefront API_ and manage its access
+- [ ] Grab the following credentials
+  - Shopify Sorefront Token
+  - Shopify Store Domain
 
-## Deploy your own
+### Locally
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+- [ ] Clone this repository and run `npm install`
+- [ ] Create a file called `.env.local` in the root of the project
+- [ ] Create two environment variables
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+  ```bash
+  SHOPIFY_STOREFRONT_ACCESSTOKEN=<Your Access Token>
+  SHOPIFY_STORE_DOMAIN=<Your Store Domain>
+  ```
 
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- [ ] Change category name on `lib/shopify.js:29` to the category you created
+      before
+- [ ] run `npm run dev`
