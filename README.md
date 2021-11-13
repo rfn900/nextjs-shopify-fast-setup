@@ -10,9 +10,9 @@ Make sure you clear the following steps
 ### On [Shopify](https://shopify.dev/)
 
 - [ ] Create a developer account with Shopify
-- [ ] Create a private app to create an API access into your dev store
+- [ ] Create a private app to set up an API access into your dev store
 - [ ] Create a collection and load up some test products
-- [ ] Create a private app for the _Storefront API_ and manage its access
+- [ ] Set up your private app to use the _Storefront API_ and manage its access
 - [ ] Grab the following credentials
   - Shopify Sorefront Token
   - Shopify Store Domain
